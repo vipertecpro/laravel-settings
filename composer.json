@@ -1,0 +1,58 @@
+{
+  "name": "vipertecpro/laravel-settings",
+  "description": "Simple Settings package for laravel application",
+  "keywords": [
+    "Laravel",
+    "Laravel 6",
+    "Settings"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Vipul Walia",
+      "email": "vipertecpro@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Vipertecpro\\Settings\\": "src/"
+    }
+  },
+  "minimum-stability": "stable",
+  "require": {
+    "php": "^7.2",
+    "illuminate/support": "6.*",
+    "illuminate/http": "6.*",
+    "illuminate/routing": "6.*",
+    "illuminate/view": "6.*",
+    "illuminate/session": "6.*",
+    "illuminate/config": "6.*",
+    "illuminate/translation": "6.*",
+    "illuminate/database": "6.*",
+    "illuminate/contracts": "6.*",
+    "ext-json": "*",
+    "ext-gd": "*",
+    "laravel/helpers": "^1.1",
+    "laravelcollective/html": "^6.0"
+  },
+  "require-dev": {
+    "composer/composer": "^1.9",
+    "filp/whoops": "~2.0",
+    "fzaninotto/faker": "~1.4",
+    "mockery/mockery": "~1.0",
+    "nunomaduro/collision": "~2.0",
+    "phpunit/phpunit": "~7.0",
+    "roave/security-advisories": "dev-master",
+    "symfony/thanks": "^1.0"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Vipertecpro\\Settings\\App\\Providers\\SettingServiceProvider"
+      ],
+      "aliases": {
+        "Settings": "Vipertecpro\\Settings\\App\\Facades\\Setting"
+      }
+    }
+  }
+}
