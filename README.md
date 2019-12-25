@@ -1,7 +1,12 @@
-# Laravel Settings
+# Laravel 6.x Settings
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/Vipertecpro/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/Vipertecpro/laravel-settings)
-[![Total Downloads](https://img.shields.io/packagist/dt/Vipertecpro/laravel-settings.svg?style=flat-square)](https://packagist.org/packages/Vipertecpro/laravel-settings)
+[![Latest Stable Version](https://poser.pugx.org/vipertecpro/laravel-settings/v/stable)](https://packagist.org/packages/vipertecpro/laravel-settings)
+[![Total Downloads](https://poser.pugx.org/vipertecpro/laravel-settings/downloads)](https://packagist.org/packages/vipertecpro/laravel-settings)
+[![Build Status](https://scrutinizer-ci.com/g/vipertecpro/laravel-settings/badges/build.png?b=master)](https://scrutinizer-ci.com/g/vipertecpro/laravel-settings/build-status/master)
+[![Monthly Downloads](https://poser.pugx.org/vipertecpro/laravel-settings/d/monthly)](https://packagist.org/packages/vipertecpro/laravel-settings/)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/vipertecpro/laravel-settings/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/vipertecpro/laravel-settings/?branch=master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/vipertecpro/laravel-settings/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
+[![License](https://poser.pugx.org/vipertecpro/laravel-settings/license)](https://packagist.org/packages/vipertecpro/laravel-settings)
 
 A Laravel package that provides laravel applications settings module which needed in every application.
 
@@ -76,27 +81,28 @@ settings table will be migrated to your Database.
 after publishing the package new config file added `config/settings.php` update values as your business requirement:
 ```
 return [
-    //settings route
-    'route' => 'settings',
-
+     //settings route
+    'route_prefix' => 'settings',
+    'route-as'     => 'settings',
+    
     'middleware' => ['web', 'auth'],
-
+    
     // hidden records not editable from interface when set to false
     'show_hidden_records' => false,
-
+    
     //javascript format
     'date_format' => 'mm/dd/yyyy',
     // number of digits after the decimal point
     'number_step' => 0.001,
-
+    
     // upload path for settings of type file
     'upload_path' => 'uploads/settings',
-
+    
     // valid mime types for settings of type file
     'mimes' => 'jpg,jpeg,png,txt,csv,pdf',
-
+    
     'per_page' => 10,
-
+    
     // settings package table name the default is `settings`
     'table' => 'settings'
 ];
@@ -147,11 +153,3 @@ config('settings.upload_path') . '/' . $value;
 such as: 
 
 uploads/settings/site_logo.png
-
-## demo
-
-the demo site:
-
-[http://settings.esolution-inc.com/](http://settings.esolution-inc.com/)
-
-===================================
