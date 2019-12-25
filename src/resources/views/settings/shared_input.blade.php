@@ -14,7 +14,7 @@
 </div>
 <div class="form-group">
     <div class="col-md-10 col-md-offset-2">
-        <input type="checkbox" name="hidden" value="1" {{ isset($setting) && $setting->hidden?'checked':'' }}
+        <input type="checkbox" name="hidden" value="{{ $setting->hidden }}" {{ isset($setting) && $setting->hidden?'checked':'' }}
         data-toggle="toggle" data-onstyle="danger" data-offstyle="success" data-on="Hidden" data-off="Visible"/>
     </div>
 </div>

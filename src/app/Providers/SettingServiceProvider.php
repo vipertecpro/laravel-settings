@@ -11,7 +11,7 @@ class SettingServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(): void
     {
         $root = '/../..';
 
@@ -32,7 +32,7 @@ class SettingServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function register()
+    public function register():void
     {
         //
     }

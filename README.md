@@ -5,7 +5,7 @@
 
 A Laravel package that provides laravel applications settings module which needed in every application.
 
-Supports laravel >= 5.2
+Supports laravel >= 6.0
 
 ## Installation
 
@@ -14,12 +14,12 @@ Supports laravel >= 5.2
 Add the following to your composer file.
 
 `
-"Vipertecpro/laravel-settings": "dev-master"
+"vipertecpro/laravel-settings": "dev-master"
 `
 
 or run the following command:
 ```
-composer require Vipertecpro/laravel-settings
+composer require vipertecpro/laravel-settings
 ```
 
 2) config/app.php [no need for this step in laravel 5.5 because of packages auto discovery feature]

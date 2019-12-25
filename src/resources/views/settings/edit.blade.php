@@ -41,8 +41,7 @@
     <script type="text/javascript">
         $(document).ready(function () {
             let editor = document.querySelector('.ck-editor');
-
-            if (editor !== undefined) {
+            if (editor !== null) {
                 CKEDITOR.replace(editor, {});
                 CKEDITOR.instances['value'].on('change', function () {
                     CKEDITOR.instances['value'].updateElement()

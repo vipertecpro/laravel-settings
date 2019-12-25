@@ -3,18 +3,19 @@
 namespace Vipertecpro\Settings\App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Config;
 
 class Setting extends Model
 {
     public function __construct(array $attributes = [])
     {
-        $this->table = config('settings.table', 'settings');
+        $this->table = Config::get('settings.table', 'settings');
         parent::__construct($attributes);
     }
 
     protected $guarded = ['id'];
 
-    public function setCodeAttribute($value)
+    public function setCodeAttribute($value): void
     {
         $this->attributes['code'] = str_slug($value, '_');
     }
@@ -31,26 +32,21 @@ class Setting extends Model
         switch ($this->attributes['type']) {
             case 'FILE':
                 if (!empty($value)) {
-                    return config('settings.upload_path') . '/' . $value;
+                    return Config::get('settings.upload_path') . '/' . $value;
                 }
                 break;
             case 'SELECT':
                 $values = json_decode($value, true);
                 if ($values) {
                     return $values;
-                } else {
-                    return [];
                 }
+                return [];
                 break;
             case 'BOOLEAN':
-                if ($value == 'true') {
-                    return true;
-                } else {
-                    return false;
-                }
+                return $value === 'true';
                 break;
             case 'NUMBER':
-                return floatval($value);
+                return (float)$value;
                 break;
         }
 

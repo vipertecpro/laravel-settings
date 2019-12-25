@@ -7,7 +7,7 @@ class SettingsHelper
     /**
      * SettingsHelper constructor.
      */
-    function __construct()
+    public function __construct()
     {
     }
 
@@ -23,7 +23,7 @@ class SettingsHelper
                 $result[$item->code] = $item->value;
             }
 
-            if (empty($result) && !is_null($default)) {
+            if (empty($result) && $default !== null) {
                 return $default;
             }
 
@@ -36,14 +36,16 @@ class SettingsHelper
 
         if ($setting) {
             return $setting->value;
-        } elseif (!is_null($default)) {
+        }
+
+        if ($default !== null) {
             return $default;
         } else {
             return '';
         }
     }
 
-    public function has($key)
+    public function has($key): bool
     {
         if (strpos($key, '*')) {
             $key = str_replace('*', '%', $key);

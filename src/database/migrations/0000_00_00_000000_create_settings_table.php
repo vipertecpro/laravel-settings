@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
@@ -11,9 +12,9 @@ class CreateSettingsTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create(config('settings.table', 'settings'), function (Blueprint $table) {
+        Schema::create(Config::get('settings.table', 'settings'), static function (Blueprint $table) {
             $table->increments('id');
             $table->string('code')->unique()->index();
             $table->enum('type', ['BOOLEAN', 'NUMBER', 'DATE', 'TEXT', 'SELECT', 'FILE', 'TEXTAREA']);
@@ -29,8 +30,8 @@ class CreateSettingsTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists(config('settings.table', 'settings'));
+        Schema::dropIfExists(Config::get('settings.table', 'settings'));
     }
 }

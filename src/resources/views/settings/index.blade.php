@@ -76,11 +76,11 @@
                         <td>{{ $setting->label }}</td>
                         <td>{{ str_limit($setting->getOriginal('value'),50) }}</td>
                         <td>
-                            <a href="{{ url(config('settings.route'). '/edit/'.$setting->id) }}"
+                            <a href="{{ url(config('settings.route_prefix'). '/edit/'.$setting->id) }}"
                                class="text-primary">
                                 <i class="fa fa-2x fa-pencil-square-o" aria-hidden="true"></i></a>
 
-                            <a href="{{ url(config('settings.route') . '/' . $setting->id) }}" class="text-danger"
+                            <a href="{{ url(config('settings.route_prefix') . '/remove/' . $setting->id) }}" class="text-danger"
                                data-tr="tr_{{ $setting->id }}"
                                data-toggle="confirmation"
                                data-btn-ok-label="Delete" data-btn-ok-icon="fa fa-remove"
