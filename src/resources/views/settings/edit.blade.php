@@ -9,7 +9,7 @@
     <div class="row">
         {!!
             Form::open([
-                'url'    => url(Config::get('settings.route-as').'/update/'.$setting->id),
+                'url'    => url(Config::get('settings.route_prefix').'/update/'.$setting->id),
                 'files'  => true,
                 'class'  => 'form-horizontal',
                 'method' => 'PATCH'

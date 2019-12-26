@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4174544-b6d1-453c-8a86-8f7a6682e1f8" name="Default Changelist" comment="" />
+    <list default="true" id="f4174544-b6d1-453c-8a86-8f7a6682e1f8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/settings/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/settings/edit.blade.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,7 +17,7 @@
     </execution>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -144,7 +147,9 @@
       <option name="presentableId" value="Default" />
       <updated>1577220286294</updated>
       <workItem from="1577220288798" duration="4351000" />
-      <workItem from="1577282722561" duration="5827000" />
+      <workItem from="1577282722561" duration="6106000" />
+      <workItem from="1577309467438" duration="63000" />
+      <workItem from="1577331340147" duration="697000" />
     </task>
     <servers />
   </component>
