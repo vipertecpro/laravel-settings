@@ -105,8 +105,7 @@ class SettingsController extends Controller
         }
         $setting->code = $request->code;
         $setting->label = $request->label;
-        $setting->hidden = @$request->hidden ? '0' : '1';
-
+        $setting->hidden = @$request->hidden === null ? '0' : '1';
         switch ($setting->type) {
             case 'TEXT':
             case 'TEXTAREA':

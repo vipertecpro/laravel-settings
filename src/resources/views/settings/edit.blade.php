@@ -77,6 +77,7 @@
                     $("#tr_" + index).remove();
                 });
             }
+
         });
     </script>
 @endsection
