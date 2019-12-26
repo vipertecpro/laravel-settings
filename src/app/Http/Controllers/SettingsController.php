@@ -147,7 +147,8 @@ class SettingsController extends Controller
                 @unlink($setting->value);
             }
             $setting->delete();
-            return response()->json(['success' => 'Record has been deleted successfully', 'tr' => $tr]);
+            return redirect(url(Config::get('settings.route_prefix')))->with('success', 'Record has been deleted successfully');
+
         }catch(\Exception $exception){
             return response()->json(['error' => $exception->getMessage()]);
         }
