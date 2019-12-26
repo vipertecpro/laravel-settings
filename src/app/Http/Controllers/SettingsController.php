@@ -136,19 +136,20 @@ class SettingsController extends Controller
 
     public function destroy(Request $request, $settings_id = 0)
     {
-        $setting = Setting::find($settings_id);
-        if($setting === null){
-            return redirect(url(Config::get('settings.route_prefix')))->with('error', 'Invalid Setting ID');
-        }
-        if ($request->ajax()) {
+        try{
+
+            $setting = Setting::find($settings_id);
+            if($setting === null){
+                return redirect(url(Config::get('settings.route_prefix')))->with('error', 'Invalid Setting ID');
+            }
             $tr = 'tr_' . $setting->id;
             if ($setting->type === 'FILE') {
                 @unlink($setting->value);
             }
             $setting->delete();
             return response()->json(['success' => 'Record has been deleted successfully', 'tr' => $tr]);
-        } else {
-            return 'You can\'t proceed in delete operation';
+        }catch(\Exception $exception){
+            return response()->json(['error' => $exception->getMessage()]);
         }
     }
 
