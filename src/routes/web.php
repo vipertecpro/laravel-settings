@@ -13,7 +13,7 @@ Route::group(['middleware' => Config::get('settings.middleware')], static functi
         Route::post('/store','Vipertecpro\Settings\App\Http\Controllers\SettingsController@store')->name('store');
         Route::get('/edit/{settings_id}','Vipertecpro\Settings\App\Http\Controllers\SettingsController@edit')->name('edit');
         Route::patch('/update/{settings_id}','Vipertecpro\Settings\App\Http\Controllers\SettingsController@update')->name('update');
-        Route::post('/remove/{settings_id}','Vipertecpro\Settings\App\Http\Controllers\SettingsController@destroy')->name('remove');
+        Route::get('/remove/{settings_id}','Vipertecpro\Settings\App\Http\Controllers\SettingsController@destroy')->name('remove');
         Route::get('/download/{setting}', 'Vipertecpro\Settings\App\Http\Controllers\SettingsController@fileDownload');
     });
 });
