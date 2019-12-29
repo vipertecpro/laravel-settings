@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4174544-b6d1-453c-8a86-8f7a6682e1f8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Http/Controllers/SettingsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Http/Controllers/SettingsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/settings/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/settings/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/views/settings/shared_input.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/settings/shared_input.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/views/settings/types_value/file.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/views/settings/types_value/file.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,7 +150,10 @@
       <workItem from="1577282722561" duration="6106000" />
       <workItem from="1577309467438" duration="63000" />
       <workItem from="1577331340147" duration="906000" />
-      <workItem from="1577333258040" duration="3095000" />
+      <workItem from="1577333258040" duration="3846000" />
+      <workItem from="1577588141305" duration="22000" />
+      <workItem from="1577588186750" duration="36000" />
+      <workItem from="1577589217202" duration="12000" />
     </task>
     <servers />
   </component>
@@ -160,6 +161,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="366" y="108" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1577588154774">
+      <screen x="0" y="27" width="1366" height="707" />
+    </state>
+    <state x="366" y="108" width="624" height="551" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.27.1366.707@0.27.1366.707" timestamp="1577588154774" />
     <state x="416" y="138" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1577223161773">
       <screen x="0" y="27" width="1366" height="707" />
     </state>
