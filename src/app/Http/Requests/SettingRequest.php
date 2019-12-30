@@ -86,7 +86,7 @@ class SettingRequest extends FormRequest
             }
         }
         if ($this->isMethod('PUT') || $this->isMethod('POST')) {
-            $data['hidden'] = isset($data['hidden']) ? 1 : 0;
+            $data['hidden'] = @$data['hidden'] === null || (int)@$data['hidden'] === 0 ? '0' : '1';
         }
 
         $this->getInputSource()->replace($data);
